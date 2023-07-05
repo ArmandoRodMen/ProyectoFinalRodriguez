@@ -56,7 +56,7 @@ traer_Datos=()=>{
 
             let lista = document.querySelector('#resultado') //Seleccionar id resultados
 
-            for(elemento of datos){ //Para cada elemento del arreglo de objetos datos
+            for(elemento of datos){ //Para cada elemento del arreglo de objetos datos crear un arreglo en la lista
                 lista.innerHTML +=`
                 <tbody>
                     <th>${elemento.num}</th>
