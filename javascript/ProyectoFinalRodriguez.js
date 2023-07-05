@@ -217,6 +217,7 @@ function check_out_carrito(){ //Función del total de la tabla a una alerta
             showDenyButton: true,
             denyButtonText: `Continuar comprando`,
             confirmButtonText: '¡Comprar!',
+            confirmButtonColor: '#075d76',
             color: "#2e7277",
             background: "#d3e4db",
             showClass: {
@@ -228,7 +229,14 @@ function check_out_carrito(){ //Función del total de la tabla a una alerta
         }).then((result)=>{
             /* Read more about isConfirmed, isDenied below */
             if (result.isConfirmed) {
-                Swal.fire('Gracias por su compra, vuelva pronto', '', 'success')
+                Swal.fire({
+                    icon: 'sucess',
+                    title: '¡Gracias por su compra!',
+                    text: 'vuelva pronto',
+                    confirmButtonColor: '#075d76',
+                    color: "#2e7277",
+                    background: "#d3e4db",
+                })
                 carrito = []; //Limpiar carrito
                 localStorage.removeItem("carrito"); // Eliminar el carrito del almacenamiento local
                 mostrar_carrito(); // Actualizar la visualización del carrito

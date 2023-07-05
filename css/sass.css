@@ -463,15 +463,14 @@ a:hover {
 /* The button used to open the sidebar */
 .openbtn {
   position: fixed;
-  line-height: 45px;
   bottom: 10%;
   left: 3%;
   font-size: 20px;
-  cursor: pointer;
-  background-color: #a3a3a3;
+  background-color: #fa6800;
   color: white;
   padding: 10px 15px;
   border-radius: 5px;
+  border: none;
 }
 
 .openbtn:hover {
