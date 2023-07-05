@@ -1,0 +1,38 @@
+[
+    {
+        "producto": "Croquetas",
+        "precio": 50.00,
+        "SKU": 123,
+        "num":1
+    },
+    {
+        "producto": "Arena",
+        "precio": 100.00,
+        "SKU": 456,
+        "num":2
+    },
+    {
+        "producto": "Premios",
+        "precio": 150.00,
+        "SKU": 789,
+        "num":3
+    },
+    {
+        "producto": "Rascadero",
+        "precio": 200.00,
+        "SKU": 101,
+        "num":4
+    },
+    {
+        "producto": "Cama",
+        "precio": 250.00,
+        "SKU": 111,
+        "num":5
+    },
+    {
+        "producto": "Juguete",
+        "precio": 300.00,
+        "SKU": 213,
+        "num":6
+    }
+]

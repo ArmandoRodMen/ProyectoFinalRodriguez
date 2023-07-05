@@ -1,0 +1,62 @@
+
+/*Variable loacl de opacidad y gradiente*/
+$opacityGradien: #fffffff7;
+
+/*Importar fuente*/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Roboto:wght@400;500;900&display=swap');
+
+/*Reset*/
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/*Diseño de cuerpo*/
+body{
+    min-height: 100%;
+    background: linear-gradient($opacityGradien, $opacityGradien), url(../media/BodyBG.jpg);
+}
+
+/*Altura de html*/
+html{
+    height: 100%;
+}
+
+/*Altura y acomodo barra de navegación*/
+nav{
+    display:flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content:center;
+    resize: both;
+    background-color: $backgroundColor;
+
+    .link-color{
+        color:$background;
+    }
+}
+
+/*Acomodo de link Bootstrap*/
+.nav-link{
+    margin: 0.5rem;
+    justify-content: space-around;
+    align-content: space-around;
+    font-size: large;
+}
+
+/*Botón Bootstrap*/
+.btn-primary, .btn-primary:active, .btn-primary:visited {
+    background-color: $btn;
+    border-color: $background;
+    font-weight: bolder;
+    &:hover{
+        background-color: $background;
+        border-color: $btn;
+        .link-color{
+            color:$btn;
+        }
+    }
+}
+
+/*Fin de código*/

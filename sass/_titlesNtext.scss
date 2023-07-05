@@ -1,0 +1,90 @@
+
+/*Diseño h1*/
+h1{
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    color: $linkColor;
+    margin-top: 2.3rem;
+    margin-left: $margins; 
+    margin-right: $margins;
+}
+
+/*Diseño h2*/
+h2{
+    font-family: 'Roboto', sans-serif;
+    color: $btn;
+    margin-bottom: 2rem;
+    margin-left: $margins; 
+    margin-right: $margins;
+}
+
+/*Diseño h3*/
+h3{
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.8rem;
+    color: $btn;
+    margin-top: 2rem;
+    margin-left: $margins; 
+    margin-right: $margins;
+}
+
+/*Diseño h4*/
+h4{
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5rem;
+    color: $btn;
+    margin-top: 1rem;
+    margin-left: $marginReferences; 
+    margin-right: $marginReferences;
+    text-align: center;
+    width: 95%;
+}
+
+/*Diseño h5*/
+h5{
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2rem;
+    text-align: right;
+    color:$textColor;
+    width: 95%;
+    margin-left: $marginReferences; 
+    margin-right: $marginReferences;
+}
+
+/*Diseño p*/
+p{
+    font-family: 'Roboto', sans-serif;
+    margin-top: 1rem;
+    margin-left: $marginsText ;
+    margin-right: $marginsText ;
+    text-align: justify;
+    color: $textColor;
+    width: 90%;
+}
+
+/*Diseño ul y li listados*/
+ul{
+    li{
+        list-style-type: none;
+    }
+} 
+
+a{
+    text-decoration: none;
+    color: $btn;
+    &:hover{
+        color:$linkColor;
+    }
+}
+
+/*Acomodo de contenedores de texto e imágenes*/
+.text-container, .images-container{
+    display: inline-block;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content:center;
+    margin: auto;
+}
+
+/*Fin de código*/

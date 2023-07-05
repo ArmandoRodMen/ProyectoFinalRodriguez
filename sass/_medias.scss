@@ -1,0 +1,70 @@
+
+/*Contenedor y acomodo, y tamaño de video*/
+.video-container{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 56.25%;
+    
+
+    /*Vídeo responsivo*/
+    .responsive-iframe{
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+/*Grids para galería*/
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 200px;
+    padding: 20px;
+    grid-gap: 10px;
+
+    /*Grids para galería en página de donaciones*/
+    .don {
+        display: grid;
+        width: 100%;
+        grid-template-columns: repeat(1, 1fr);
+        grid-auto-rows: 250px;
+        padding: 0px;
+        grid-gap: 10px;
+    }
+
+    /*Contenedor de imágenes*/
+    .image{
+        border-radius: 5%;
+        border-style: solid;
+        border-radius: 1rem;
+        border-color: $btn;
+        transform: all 3s ease;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        &:hover{
+            transform: scale(95%);
+            filter: opacity(80%);
+            border-color: $linkColor;
+        }
+        &:not(:hover){
+            transform: scale(100%);
+        }
+    }
+
+    /*Items individuales de elementos de galería*/
+    .item{
+        position: relative;
+        width: auto;
+    }
+
+}
+
+/*Fin de código*/

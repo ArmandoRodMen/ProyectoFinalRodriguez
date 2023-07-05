@@ -1,0 +1,117 @@
+
+/*Media queries para móvil*/
+@media (min-width: 320px){
+    .gallery-container{
+        grid-template-columns: repeat(1, 1fr);
+        width: 100%;
+    }
+    h1{
+        font-size: 2rem;
+    }
+    h2{
+        font-size: 1.5rem;
+    }
+    h3{
+        font-size: 1.4rem;
+    }
+    h4{
+        font-size: 1.3rem;
+    }
+    h5{
+        font-size: 1rem;
+    }
+    p{
+        font-size: 1rem;
+        margin-left: $marginReferences;
+        margin-right: $marginReferences;
+        text-align:start;
+    }
+    img{
+        width: 90%;
+    }
+    .slogan{
+        font-size: small;
+    }
+    .grid-container{
+        grid-template:
+            "header" 100px
+            "navigationbar" 100px
+            "main" auto
+            "sidebar" auto
+            "footer" 100px /
+            100%;
+    }
+}
+
+/*Media queries para tablet*/
+@media (min-width:760px){
+    h1{
+        font-size: 4rem;
+    }
+    h2{
+        font-size: 1.5rem;
+    }
+    p{
+        margin-left: $marginsText;
+        margin-right: $marginsText;
+        font-size: 16px;
+        text-align:start;
+    }
+    .gallery-container{
+        grid-template-columns: repeat(2, 1fr);
+        width: 100%;
+    }
+    img{
+        width: 90%;
+    }
+    .slogan{
+        font-size: medium;
+    }
+    .grid-container{
+        grid-template:
+            "header" 120px
+            "navigationbar" 100px
+            "main" auto
+            "sidebar" auto
+            "footer" 100px /
+            100%;
+    }
+}
+
+/*Media queries para laptop*/
+@media (min-width: 1000px){
+    h1{
+        font-size: 5rem;
+    }
+    p{
+        text-align:start;
+        font-size: 20px;
+    }
+    .gallery-container{
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .grid-container{
+        grid-template:
+            "header header header" 150px
+            "navigationbar navigationbar navigationbar" 100px
+            "marginL main marginR" auto
+            "marginL sidebar marginR" auto
+            "footer footer footer" 100px /
+            10% auto 10%;
+    }
+}
+
+/*Media queries para wide screens*/
+@media (min-width: 1500px){
+    .grid-container{
+        grid-template:
+            "header header header" 180px
+            "navigationbar navigationbar navigationbar" 120px
+            "marginL main marginR" auto
+            "marginL sidebar marginR" auto
+            "footer footer footer" 120px /
+            20% auto 20%;
+    }
+}
+
+/*Fin de código*/

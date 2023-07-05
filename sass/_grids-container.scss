@@ -1,0 +1,150 @@
+
+/*Variables locales*/
+$r: 250;
+$g: 255;
+$b: 253;
+$a: 0.9;
+
+/*Mixin input height output animación*/
+@mixin logos($height){
+    height: $height;
+    animation: shade 0.5s ease-in-out;
+
+    @keyframes shade {
+        0%{
+            opacity:0;
+            scale: 90%
+        }
+        100%{
+            opacity: 1;
+            scale:100%
+        }
+    }
+}
+
+/*Grids por áreas*/
+.grid-container{
+    display: grid;
+    overflow-x: hidden;
+    text-align: center;
+    
+    /*Declaración de área de encabezado*/
+    .header{
+        display:flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content:center;
+        resize: both;
+        grid-area: header;
+        background-color: $background;
+
+        /*Encabezado página principal*/
+        .logoLP{
+            margin-top: 0.2rem;
+            margin-bottom: 0.2rem;
+            @include logos(90%);
+        }
+
+        /*Encabezado logo*/
+        .logo{
+            @include logos(75%);
+        }
+
+    }
+
+    /*Declaración de área de barra de navegación*/
+    .navigationbar{
+        display:flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content:center;
+        resize: both;
+        grid-area: navigationbar;
+    }
+
+    .marginR{
+        grid-area: marginR;
+        background: linear-gradient(270deg, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+    }
+
+    .marginL{
+        grid-area: marginL;
+        background: linear-gradient(90deg, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+    }
+
+    /*Declaración de área de texto principal*/
+    .main{
+        grid-area: main;
+        padding: 3rem;
+        .landing,.mb-3{
+            border-radius: 2%;
+            min-height: 100%;
+            background: linear-gradient(rgba($r,$g,$b,$a), rgba($r,$g,$b,1)),
+            url(../media/MichiFondo.png);
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-attachment: fixed;
+            background-size: cover;
+            .form-control{
+                background: linear-gradient(rgba($r,$g,$b,0.98), rgba($r,$g,$b,1)),
+                url(../media/MichiFondo.png);
+            }
+        }
+    }
+
+    /*Declaración de área de texto lateral*/
+    .sidebar{
+        grid-area: sidebar;
+        padding: 3rem;
+        /*Contenedor de referencias*/
+        .references{
+            background-color: $backgroundColor;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: center;
+            text-decoration: none;
+            margin-left: $marginReferences;
+            margin-right: $marginReferences;
+        }
+    }
+
+    /*Declaración de área de pie de página*/
+    .footer{
+        grid-area: footer;
+        display: flex;
+        background-color: $backgroundColor;
+
+        /*Texto en pie de página*/
+        .slogan{
+            padding-top: 0.3rem;
+            width: 40%;
+            height: 20%;
+            align-content: left;
+        }
+
+        /*Iconos ded pie de página, mouse responsive*/
+        .icon{
+            &:hover{
+                transform: scale(90%);
+                filter: opacity(50%);
+            }
+            &:not(:hover){
+                transform: scale(100%);
+            }
+            padding-top: 1rem;
+            padding-right: 0.5rem;
+            height: 60%;
+            display: flex;
+            margin-left: $marginReferences;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: end;
+            align-content: end;
+        }
+    }
+}
+
+/*Fin de código*/
+
+

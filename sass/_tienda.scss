@@ -1,0 +1,134 @@
+
+.flex-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+    height: auto;
+}
+
+.flex-box_carta{
+    width: 19rem;
+    height: 43rem;
+    border-radius: 1rem;
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-box_producto{
+    width: 18rem;
+    height: 42rem;
+    border-radius: 1rem;
+    display:block;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-box_imagen{
+    width: 10rem;
+    height: 10rem;
+    border-radius: 1rem;
+}
+
+.flex-box_compra{
+    justify-content: center;
+}
+
+.carrito{
+    display: inline;
+    align-items: stretch;
+    grid-area: carrito;
+}
+
+.img_add{
+    border-radius: 0.5rem;
+    width: 3rem;
+    height: 3rem;
+}
+
+.p_add, .tienda_texto, .contador, .btn_cantidad{
+    text-align:center;
+    margin: 0;
+    margin-left: 1rem;
+    margin-bottom: 0.5rem;
+    justify-content: center;
+}
+
+.maincontent{
+    padding-top: 0%;
+    padding-left:0%;
+}
+
+.col {
+    padding: 1%;
+}
+.col-lg{
+    height: 200px;
+    overflow: hidden;
+    margin: 10px 0;
+    position: relative;
+    flex-basis: 30%;
+}
+
+/* Images crop and center to col-lg box up to 1000% centering (if 100% if it's 3x the size it doesn't fully center)Idk man why? projectors and stuff? */
+.col-lg img{
+    display:block;
+    position: absolute;
+    left: -1000%;
+    right: -1000%;
+    top: -1000%;
+    bottom: -1000%;
+    margin: auto;
+    min-height: 100%;
+    min-width: 100%;
+}
+
+.imgrid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* The sidebar menu */
+.sidebar {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0;
+    left: 0;
+    background-color: #ffffff; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
+}
+
+/* Position and style the close button (top right corner) */
+.closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+  /* The button used to open the sidebar */
+.openbtn {
+    position: fixed;
+    line-height: 45px;
+    bottom: 10%;
+    left: 3%;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #a3a3a3;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+.openbtn:hover {
+    background-color: #444;
+}
+

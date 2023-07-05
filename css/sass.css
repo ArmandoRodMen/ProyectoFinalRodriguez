@@ -1,0 +1,569 @@
+@charset "UTF-8";
+/*Variables globales de color*/
+/*Variables globales de unidades*/
+/*Fin de código*/
+/*Variable loacl de opacidad y gradiente*/
+/*Importar fuente*/
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Roboto:wght@400;500;900&display=swap");
+/*Reset*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/*Diseño de cuerpo*/
+body {
+  min-height: 100%;
+  background: linear-gradient(rgba(255, 255, 255, 0.968627451), rgba(255, 255, 255, 0.968627451)), url(../media/BodyBG.jpg);
+}
+
+/*Altura de html*/
+html {
+  height: 100%;
+}
+
+/*Altura y acomodo barra de navegación*/
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  resize: both;
+  background-color: #cfcfcf;
+}
+nav .link-color {
+  color: white;
+}
+
+/*Acomodo de link Bootstrap*/
+.nav-link {
+  margin: 0.5rem;
+  justify-content: space-around;
+  align-content: space-around;
+  font-size: large;
+}
+
+/*Botón Bootstrap*/
+.btn-primary, .btn-primary:active, .btn-primary:visited {
+  background-color: #075d76;
+  border-color: white;
+  font-weight: bolder;
+}
+.btn-primary:hover, .btn-primary:active:hover, .btn-primary:visited:hover {
+  background-color: white;
+  border-color: #075d76;
+}
+.btn-primary:hover .link-color, .btn-primary:active:hover .link-color, .btn-primary:visited:hover .link-color {
+  color: #075d76;
+}
+
+/*Fin de código*/
+/*Variables locales*/
+/*Mixin input height output animación*/
+/*Grids por áreas*/
+.grid-container {
+  display: grid;
+  overflow-x: hidden;
+  text-align: center;
+  /*Declaración de área de encabezado*/
+  /*Declaración de área de barra de navegación*/
+  /*Declaración de área de texto principal*/
+  /*Declaración de área de texto lateral*/
+  /*Declaración de área de pie de página*/
+}
+.grid-container .header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  resize: both;
+  grid-area: header;
+  background-color: white;
+  /*Encabezado página principal*/
+  /*Encabezado logo*/
+}
+.grid-container .header .logoLP {
+  margin-top: 0.2rem;
+  margin-bottom: 0.2rem;
+  height: 90%;
+  animation: shade 0.5s ease-in-out;
+}
+@keyframes shade {
+  0% {
+    opacity: 0;
+    scale: 90%;
+  }
+  100% {
+    opacity: 1;
+    scale: 100%;
+  }
+}
+.grid-container .header .logo {
+  height: 75%;
+  animation: shade 0.5s ease-in-out;
+}
+@keyframes shade {
+  0% {
+    opacity: 0;
+    scale: 90%;
+  }
+  100% {
+    opacity: 1;
+    scale: 100%;
+  }
+}
+.grid-container .navigationbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  resize: both;
+  grid-area: navigationbar;
+}
+.grid-container .marginR {
+  grid-area: marginR;
+  background: linear-gradient(270deg, rgb(255, 255, 255), rgba(255, 255, 255, 0));
+}
+.grid-container .marginL {
+  grid-area: marginL;
+  background: linear-gradient(90deg, rgb(255, 255, 255), rgba(255, 255, 255, 0));
+}
+.grid-container .main {
+  grid-area: main;
+  padding: 3rem;
+}
+.grid-container .main .landing, .grid-container .main .mb-3 {
+  border-radius: 2%;
+  min-height: 100%;
+  background: linear-gradient(rgba(250, 255, 253, 0.9), rgb(250, 255, 253)), url(../media/MichiFondo.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+.grid-container .main .landing .form-control, .grid-container .main .mb-3 .form-control {
+  background: linear-gradient(rgba(250, 255, 253, 0.98), rgb(250, 255, 253)), url(../media/MichiFondo.png);
+}
+.grid-container .sidebar {
+  grid-area: sidebar;
+  padding: 3rem;
+  /*Contenedor de referencias*/
+}
+.grid-container .sidebar .references {
+  background-color: #cfcfcf;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-decoration: none;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+.grid-container .footer {
+  grid-area: footer;
+  display: flex;
+  background-color: #cfcfcf;
+  /*Texto en pie de página*/
+  /*Iconos ded pie de página, mouse responsive*/
+}
+.grid-container .footer .slogan {
+  padding-top: 0.3rem;
+  width: 40%;
+  height: 20%;
+  align-content: left;
+}
+.grid-container .footer .icon {
+  padding-top: 1rem;
+  padding-right: 0.5rem;
+  height: 60%;
+  display: flex;
+  margin-left: 0.5rem;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: end;
+  align-content: end;
+}
+.grid-container .footer .icon:hover {
+  transform: scale(90%);
+  filter: opacity(50%);
+}
+.grid-container .footer .icon:not(:hover) {
+  transform: scale(100%);
+}
+
+/*Fin de código*/
+/*Diseño h1*/
+h1 {
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+  color: #fa6800;
+  margin-top: 2.3rem;
+  margin-left: 5rem;
+  margin-right: 5rem;
+}
+
+/*Diseño h2*/
+h2 {
+  font-family: "Roboto", sans-serif;
+  color: #075d76;
+  margin-bottom: 2rem;
+  margin-left: 5rem;
+  margin-right: 5rem;
+}
+
+/*Diseño h3*/
+h3 {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.8rem;
+  color: #075d76;
+  margin-top: 2rem;
+  margin-left: 5rem;
+  margin-right: 5rem;
+}
+
+/*Diseño h4*/
+h4 {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.5rem;
+  color: #075d76;
+  margin-top: 1rem;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  text-align: center;
+  width: 95%;
+}
+
+/*Diseño h5*/
+h5 {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.2rem;
+  text-align: right;
+  color: black;
+  width: 95%;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+/*Diseño p*/
+p {
+  font-family: "Roboto", sans-serif;
+  margin-top: 1rem;
+  margin-left: 4rem;
+  margin-right: 4rem;
+  text-align: justify;
+  color: black;
+  width: 90%;
+}
+
+/*Diseño ul y li listados*/
+ul li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: #075d76;
+}
+a:hover {
+  color: #fa6800;
+}
+
+/*Acomodo de contenedores de texto e imágenes*/
+.text-container, .images-container {
+  display: inline-block;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  margin: auto;
+}
+
+/*Fin de código*/
+/*Contenedor y acomodo, y tamaño de video*/
+.video-container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding-top: 56.25%;
+  /*Vídeo responsivo*/
+}
+.video-container .responsive-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/*Grids para galería*/
+.gallery-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 200px;
+  padding: 20px;
+  grid-gap: 10px;
+  /*Grids para galería en página de donaciones*/
+  /*Contenedor de imágenes*/
+  /*Items individuales de elementos de galería*/
+}
+.gallery-container .don {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(1, 1fr);
+  grid-auto-rows: 250px;
+  padding: 0px;
+  grid-gap: 10px;
+}
+.gallery-container .image {
+  border-radius: 5%;
+  border-style: solid;
+  border-radius: 1rem;
+  border-color: #075d76;
+  transform: all 3s ease;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.gallery-container .image:hover {
+  transform: scale(95%);
+  filter: opacity(80%);
+  border-color: #fa6800;
+}
+.gallery-container .image:not(:hover) {
+  transform: scale(100%);
+}
+.gallery-container .item {
+  position: relative;
+  width: auto;
+}
+
+/*Fin de código*/
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 100%;
+  height: auto;
+}
+
+.flex-box_carta {
+  width: 19rem;
+  height: 43rem;
+  border-radius: 1rem;
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-box_producto {
+  width: 18rem;
+  height: 42rem;
+  border-radius: 1rem;
+  display: block;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-box_imagen {
+  width: 10rem;
+  height: 10rem;
+  border-radius: 1rem;
+}
+
+.flex-box_compra {
+  justify-content: center;
+}
+
+.carrito {
+  display: inline;
+  align-items: stretch;
+  grid-area: carrito;
+}
+
+.img_add {
+  border-radius: 0.5rem;
+  width: 3rem;
+  height: 3rem;
+}
+
+.p_add, .tienda_texto, .contador, .btn_cantidad {
+  text-align: center;
+  margin: 0;
+  margin-left: 1rem;
+  margin-bottom: 0.5rem;
+  justify-content: center;
+}
+
+.maincontent {
+  padding-top: 0%;
+  padding-left: 0%;
+}
+
+.col {
+  padding: 1%;
+}
+
+.col-lg {
+  height: 200px;
+  overflow: hidden;
+  margin: 10px 0;
+  position: relative;
+  flex-basis: 30%;
+}
+
+/* Images crop and center to col-lg box up to 1000% centering (if 100% if it's 3x the size it doesn't fully center)Idk man why? projectors and stuff? */
+.col-lg img {
+  display: block;
+  position: absolute;
+  left: -1000%;
+  right: -1000%;
+  top: -1000%;
+  bottom: -1000%;
+  margin: auto;
+  min-height: 100%;
+  min-width: 100%;
+}
+
+.imgrid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+/* The sidebar menu */
+.sidebar {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0;
+  left: 0;
+  background-color: #ffffff; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
+}
+
+/* Position and style the close button (top right corner) */
+.closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+/* The button used to open the sidebar */
+.openbtn {
+  position: fixed;
+  line-height: 45px;
+  bottom: 10%;
+  left: 3%;
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #a3a3a3;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+}
+
+.openbtn:hover {
+  background-color: #444;
+}
+
+/*Media queries para móvil*/
+@media (min-width: 320px) {
+  .gallery-container {
+    grid-template-columns: repeat(1, 1fr);
+    width: 100%;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+  h3 {
+    font-size: 1.4rem;
+  }
+  h4 {
+    font-size: 1.3rem;
+  }
+  h5 {
+    font-size: 1rem;
+  }
+  p {
+    font-size: 1rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    text-align: start;
+  }
+  img {
+    width: 90%;
+  }
+  .slogan {
+    font-size: small;
+  }
+  .grid-container {
+    grid-template: "header" 100px "navigationbar" 100px "main" auto "sidebar" auto "footer" 100px/100%;
+  }
+}
+/*Media queries para tablet*/
+@media (min-width: 760px) {
+  h1 {
+    font-size: 4rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+  p {
+    margin-left: 4rem;
+    margin-right: 4rem;
+    font-size: 16px;
+    text-align: start;
+  }
+  .gallery-container {
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+  }
+  img {
+    width: 90%;
+  }
+  .slogan {
+    font-size: medium;
+  }
+  .grid-container {
+    grid-template: "header" 120px "navigationbar" 100px "main" auto "sidebar" auto "footer" 100px/100%;
+  }
+}
+/*Media queries para laptop*/
+@media (min-width: 1000px) {
+  h1 {
+    font-size: 5rem;
+  }
+  p {
+    text-align: start;
+    font-size: 20px;
+  }
+  .gallery-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .grid-container {
+    grid-template: "header header header" 150px "navigationbar navigationbar navigationbar" 100px "marginL main marginR" auto "marginL sidebar marginR" auto "footer footer footer" 100px/10% auto 10%;
+  }
+}
+/*Media queries para wide screens*/
+@media (min-width: 1500px) {
+  .grid-container {
+    grid-template: "header header header" 180px "navigationbar navigationbar navigationbar" 120px "marginL main marginR" auto "marginL sidebar marginR" auto "footer footer footer" 120px/20% auto 20%;
+  }
+}
+/*Fin de código*/
+/*Fin de código*//*# sourceMappingURL=sass.css.map */
